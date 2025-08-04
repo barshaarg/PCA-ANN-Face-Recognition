@@ -77,3 +77,10 @@ PCA_ANN_FaceRecognition/
 3. Run each cell in order.
 
 > Make sure `dataset/` and `imposters/` folders are placed in the same directory as the notebook.
+> ---
+
+## 👩‍💻 Author
+
+- **Barsha Rani Gogoi**  
+  B.Pharm Graduate | PCA + ANN Face Recognition Project  
+  GitHub: [@barshaarg](https://github.com/barshaarg)
