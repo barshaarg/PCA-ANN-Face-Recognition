@@ -4,13 +4,13 @@ This project implements a face recognition system using **Principal Component An
 
 ---
 
-## 📁 Dataset
+## 📂 Dataset
 
 - 450 grayscale images of known individuals (organized in subfolders).
-- Images resized to **92x112** (10304 features).
+- Images resized to 92x112 (10304 features).
 - Additional "imposter" images used to evaluate unknown face detection.
-
----
+- ⚠️ **Note**: Due to GitHub file size limits, only a few sample images are uploaded.
+- 📁 The full dataset is stored locally and can be provided upon request.
 
 ## 🚀 Project Steps
 
