@@ -1,32 +1,58 @@
-# Face Recognition using PCA + ANN
+# 🎭 PCA + ANN Face Recognition System
 
-This project implements a basic face recognition system using Principal Component Analysis (PCA) and an Artificial Neural Network (ANN).
-
-## 📁 Dataset
-- 450 grayscale images of 9 individuals.
-- Each image is resized to **15x30** (450 pixels).
-- Dataset was preloaded locally and not uploaded to GitHub.
-
-## 🔍 Steps Performed
-1. Load and preprocess images (convert to grayscale and resize).
-2. Flatten each image and construct the data matrix.
-3. Apply PCA for dimensionality reduction.
-4. Train a simple ANN on PCA-transformed data.
-5. Test with a new “imposter” image.
-
-## 📈 Accuracy
-- **Test Accuracy:** 45.56% on unseen data.
-
-## 🤖 Imposter Result
-- A random image was predicted as: **Ajay**
-
-## 🚀 Tools Used
-- Python, OpenCV, NumPy, scikit-learn, Keras
-
-## 📌 Notes
-- The dataset folder is large, so it’s excluded from this repo.
-- Trained using `model_training.ipynb` notebook.
+This project implements a face recognition system using **Principal Component Analysis (PCA)** for dimensionality reduction and an **Artificial Neural Network (ANN)** for classification.
 
 ---
-> Submitted for project: LYST7052  
-> Author: Barsha Rani Gogoi
+
+## 📁 Dataset
+
+- 450 grayscale images of known individuals (organized in subfolders).
+- Images resized to **92x112** (10304 features).
+- Additional "imposter" images used to evaluate unknown face detection.
+
+---
+
+## 🚀 Project Steps
+
+1. **Image Preprocessing**  
+   - Grayscale conversion, resizing, flattening.
+
+2. **Label Encoding & Data Split**  
+   - Labels encoded and split into 60% training / 40% test sets.
+
+3. **PCA (Dimensionality Reduction)**  
+   - Reduced from 10304 → 50 principal components.
+
+4. **ANN Training**  
+   - Trained 3-layer Keras ANN on PCA-transformed features.
+
+5. **Evaluation**  
+   - Tested model accuracy on known faces.
+   - Also evaluated on unseen imposter images.
+
+6. **Imposter Handling**  
+   - Used confidence thresholding to reject unknown faces.
+   - Successfully labeled unknowns as "Unknown".
+
+7. **Model Saving**  
+   - Saved trained model (`.keras`) and PCA data (`.npy`, `.pkl`).
+
+---
+
+## 📊 Results
+
+- **Training Accuracy:** ~96%
+- **Test Accuracy:** ~38.89%
+- **Imposter Evaluation:** Unknown faces correctly rejected using threshold (≥ 0.9)
+
+---
+
+## 🧰 Tools Used
+
+- Python, OpenCV, NumPy, scikit-learn, TensorFlow/Keras  
+- Jupyter Notebook for development
+
+---
+
+## 📂 Folder Structure
+
