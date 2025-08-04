@@ -55,4 +55,25 @@ This project implements a face recognition system using **Principal Component An
 ---
 
 ## 📂 Folder Structure
+PCA_ANN_FaceRecognition/
+│
+├── dataset/
+│ └── faces/ # Real face images in subfolders
+├── imposters/ # Unknown face images
+├── pca_ann_face_recognition.ipynb
+├── model.keras
+├── eigenfaces.npy
+├── mean_face.npy
+├── label_encoder.pkl
+├── pca_mean.pkl
+└── pca_eigenfaces.pkl
 
+---
+
+## ✅ How to Run
+
+1. Clone the repo or download the ZIP.
+2. Open `pca_ann_face_recognition.ipynb` in Jupyter Notebook.
+3. Run each cell in order.
+
+> Make sure `dataset/` and `imposters/` folders are placed in the same directory as the notebook.
